@@ -20,6 +20,7 @@
         --text-muted: #b3a290;
         --gold-glow: 0 0 20px rgba(255, 204, 0, 0.6);
         --btn-gradient: linear-gradient(180deg, #ffe066 0%, #d4af37 100%);
+        --btn-floating-gradient: linear-gradient(180deg, #ff4e50 0%, #f9d423 100%);
       }
 
       body {
@@ -30,6 +31,7 @@
         padding: 0;
         text-align: center;
         background-image: radial-gradient(circle at center, #26180a 0%, #0f0a05 100%);
+        padding-bottom: 80px; /* Jarak bawah agar konten tidak tertutup tombol floating */
       }
 
       header {
@@ -48,7 +50,6 @@
         position: relative;
       }
 
-      /* Animasi Spin / Berputar pada Ornamen Belakang Logo */
       .logo-glow-bg {
         position: absolute;
         top: 50%;
@@ -69,7 +70,6 @@
         padding: 15px;
       }
 
-      /* Efek Meriah Parallaxy & Glow pada Banner */
       .banner-container {
         border: 2px solid var(--secondary);
         border-radius: 8px;
@@ -80,7 +80,6 @@
         animation: pulseGlow 3s ease-in-out infinite alternate;
       }
 
-      /* Teks Berjalan / Running Text */
       .running-text {
         background-color: #251a0f;
         border: 1px solid var(--secondary);
@@ -93,7 +92,6 @@
         overflow: hidden;
       }
 
-      /* Animasi Teks Berjalan Manual (Aman untuk AMP) */
       .marquee {
         display: inline-block;
         padding-left: 100%;
@@ -107,7 +105,6 @@
         margin-bottom: 25px;
       }
 
-      /* Tombol CTA dengan Efek Animasi Denyut Kemeriahan */
       .btn {
         display: block;
         padding: 16px;
@@ -129,6 +126,35 @@
         color: var(--text-light);
         border: 1px solid #666;
         animation: none;
+      }
+
+      /* --- STYLE UNTUK TOMBOL FLOATING / MELAYANG (VALID AMP) --- */
+      .floating-container {
+        position: fixed;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 550px;
+        z-index: 999;
+      }
+
+      .btn-floating {
+        display: block;
+        padding: 14px;
+        font-size: 18px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        background: var(--btn-floating-gradient);
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(255, 78, 80, 0.6);
+        border: 2px solid #fff;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        animation: floatingPulse 1.5s infinite ease-in-out;
       }
 
       .info-table {
@@ -176,7 +202,7 @@
       
       .seo-box h1 { margin-top: 0; font-size: 20px; text-align: center; border-bottom: 1px solid #2d2013; padding-bottom: 10px; }
 
-      /* --- DEKLARASI ANIMASI KEYFRAMES (VALID AMP) --- */
+      /* --- ANIMASI KEYFRAMES --- */
       @keyframes spinWheel {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
@@ -196,6 +222,13 @@
         0% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
         50% { transform: scale(1.02); box-shadow: 0 5px 25px rgba(255, 204, 0, 0.4); }
         100% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+      }
+
+      /* Animasi khusus untuk tombol floating (efek berdenyut membesar & bercahaya) */
+      @keyframes floatingPulse {
+        0% { transform: scale(1); box-shadow: 0 8px 25px rgba(255, 78, 80, 0.6); }
+        50% { transform: scale(1.04); box-shadow: 0 12px 35px rgba(249, 212, 35, 0.9); }
+        100% { transform: scale(1); box-shadow: 0 8px 25px rgba(255, 78, 80, 0.6); }
       }
 
       footer {
@@ -235,9 +268,9 @@
       </div>
 
       <div class="btn-group">
-        <a href="https://wow33a.lol/register" class="btn">Daftar Akun WOW33</a>
-        <a href="https://wow33a.lol/login" class="btn btn-secondary">Login Masuk</a>
-        <a href="https://wow33a.lol/livechat" class="btn btn-secondary">Livechat Hubungi CS</a>
+        <a href="https://heylink.me/ABC33a" class="btn">Daftar Akun WOW33</a>
+        <a href="https://heylink.me/ABC33a" class="btn btn-secondary">Login Masuk</a>
+        <a href="https://heylink.me/ABC33a" class="btn btn-secondary">Livechat Hubungi CS</a>
       </div>
 
       <table class="info-table">
@@ -265,7 +298,7 @@
 
       <section class="seo-box">
         <h1>WOW33 - Destinasi Utama Game Online Cuan Resmi dan Paling Populer</h1>
-        <p>Perkembangan teknologi digital kini membawa angin segar bagi para pecinta hiburan virtual. <strong>WOW33</strong> hadir sebagai penyedia ekosistem <strong>game online cuan</strong> terkemika yang menyajikan berbagai pilihan permainan interaktif modern dengan peluang profit harian maksimal.</p>
+        <p>Perkembangan teknologi digital kini membawa angin segar bagi para pecinta hiburan virtual. <strong>WOW33</strong> hadir sebagai penyedia ekosistem <strong>game online cuan</strong> terkemuka yang menyajikan berbagai pilihan permainan interaktif modern dengan peluang profit harian maksimal.</p>
         <p>Di WOW33, seluruh mekanisme permainan dirancang dengan sistem komputasi mutakhir guna menjamin keadilan yang setara untuk seluruh member. Anda dapat menikmati beragam variasi hiburan menarik, mulai dari strategi kartu, ketangkasan tebak angka, hingga mekanisme putaran roda keberuntungan.</p>
         
         <h2>Fasilitas Unggulan Bermain di Link Alternatif WOW33</h2>
@@ -276,6 +309,10 @@
         </ul>
       </section>
 
+    </div>
+
+    <div class="floating-container">
+      <a href="https://heylink.me/ABC33a" class="btn-floating">🔥 DAFTAR AKUN VIP DISINI 🔥</a>
     </div>
 
     <footer>
